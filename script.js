@@ -8,6 +8,8 @@ function setType(selectedType) {
   });
   event.target.classList.add('bg-gradient-to-r', 'from-purple-500', 'to-pink-500', 'text-white');
 }
+function setType(selectedType, event) {
+
 
 function handleDownload() {
   const url = document.getElementById('url').value;
@@ -21,7 +23,7 @@ function handleDownload() {
 
   status.textContent = "Processing...";
 
-  fetch('https://your-backend-url.com/download', {
+  fetch('https://media-downloader-backend-oxij.onrender.com//download', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ url, type, quality })
