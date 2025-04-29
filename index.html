@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>🔥 Ultimate Media Downloader</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="style.css" rel="stylesheet" />
+</head>
+<body class="bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 min-h-screen text-white flex items-center justify-center p-6 font-sans">
+
+  <div class="bg-white text-gray-900 rounded-3xl shadow-2xl max-w-xl w-full p-8 space-y-6 border-8 border-double border-pink-300">
+    <h1 class="text-4xl font-extrabold text-center text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-purple-600 drop-shadow-lg">
+      🔥 Insta & YouTube Downloader
+    </h1>
+    <p class="text-center text-sm text-gray-600">Download Reels, Shorts, Videos, and Profile Photos in style!</p>
+
+    <div class="grid grid-cols-2 gap-3">
+      <button onclick="setType('youtube')" class="tab-button bg-yellow-100 text-yellow-800 py-2 px-4 rounded-xl font-bold">YouTube</button>
+      <button onclick="setType('shorts')" class="tab-button bg-green-100 text-green-800 py-2 px-4 rounded-xl font-bold">Shorts</button>
+      <button onclick="setType('reel')" class="tab-button bg-blue-100 text-blue-800 py-2 px-4 rounded-xl font-bold">Reel</button>
+      <button onclick="setType('profile')" class="tab-button bg-pink-100 text-pink-800 py-2 px-4 rounded-xl font-bold">Profile</button>
+    </div>
+
+    <input id="url" type="text" placeholder="Paste your video URL here" class="w-full mt-4 p-3 rounded-xl border border-gray-300 focus:ring-4 focus:ring-pink-300" />
+
+    <div class="mt-2">
+      <label for="quality" class="text-sm font-semibold">Select Quality:</label>
+      <select id="quality" class="w-full mt-1 p-2 rounded-lg bg-gray-100 border border-gray-300">
+        <option value="best">Best Available</option>
+        <option value="360p">360p</option>
+        <option value="480p">480p</option>
+        <option value="720p">720p</option>
+        <option value="1080p">1080p</option>
+      </select>
+    </div>
+
+    <button onclick="handleDownload()" class="bg-gradient-to-r from-pink-500 to-red-500 text-white w-full py-3 rounded-xl text-lg font-semibold shadow-lg hover:scale-105 transition transform duration-200">
+      🚀 Download Now
+    </button>
+
+    <p id="status" class="text-center text-sm text-gray-700 font-medium pt-2"></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
